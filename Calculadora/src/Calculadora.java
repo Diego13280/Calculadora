@@ -30,17 +30,27 @@ public class Calculadora {
             String strLinea;           
             
             // Leer el archivo linea por linea
-            while ((strLinea = buffer.readLine()) != null)   {
-                // Imprimimos la línea por pantalla
-                System.out.println (strLinea);
-                
-                char[] aCaracteres = strLinea.toCharArray();
-                
-                for (int x=0;x<aCaracteres.length;x++)
-                    System.out.println("[" + x + "] " + aCaracteres[x]);
-
+            strLinea = buffer.readLine();
+            // Imprimimos la línea por pantalla
+            System.out.println (strLinea);
+            char[] aCaracteres = strLinea.toCharArray();
+            StackArrayList<String> nuevo = new StackArrayList<String>();
+            int z=0;
             
+            for(int i=0; i<strLinea.length() ;i++){
+                if(aCaracteres[i] != ' '){
+                    char a=aCaracteres[i];
+                    nuevo.push(a);
+                    z++;
+                }
+
             }
+            
+            for (int x=0;x<aCaracteres.length;x++)
+                System.out.println("[" + x + "] " + aCaracteres[x]);
+            
+
+
             // Cerramos el archivo
             entrada.close();
         }
