@@ -32,6 +32,7 @@ public class Calculadora {
             while ((strLinea = buffer.readLine()) != null)   {
                 // Imprimimos la línea por pantalla
                 System.out.println (strLinea);
+            
             }
             // Cerramos el archivo
             entrada.close();
