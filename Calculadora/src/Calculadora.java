@@ -10,6 +10,9 @@
  * @author Daniel Mejia     13271
  * @author Jose Sagastumme  13217
  */
+
+import java.io.*;
+
 public class Calculadora {
 
     /**
@@ -17,6 +20,25 @@ public class Calculadora {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
+        try{
+            // Abrimos el archivo
+            FileInputStream fstream = new FileInputStream("datos.txt");
+            // Creamos el objeto de entrada
+            DataInputStream entrada = new DataInputStream(fstream);
+            // Creamos el Buffer de Lectura
+            BufferedReader buffer = new BufferedReader(new InputStreamReader(entrada));
+            String strLinea;
+            // Leer el archivo linea por linea
+            while ((strLinea = buffer.readLine()) != null)   {
+                // Imprimimos la línea por pantalla
+                System.out.println (strLinea);
+            }
+            // Cerramos el archivo
+            entrada.close();
+        }
+        catch (Exception e){ //Catch de excepciones
+            System.err.println("Ocurrio un error: " + e.getMessage());
+        }
     
+    }
 }
