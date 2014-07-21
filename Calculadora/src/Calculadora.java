@@ -27,11 +27,17 @@ public class Calculadora {
             DataInputStream entrada = new DataInputStream(fstream);
             // Creamos el Buffer de Lectura
             BufferedReader buffer = new BufferedReader(new InputStreamReader(entrada));
-            String strLinea;
+            String strLinea;           
+            
             // Leer el archivo linea por linea
             while ((strLinea = buffer.readLine()) != null)   {
                 // Imprimimos la línea por pantalla
                 System.out.println (strLinea);
+                char[] aCaracteres = strLinea.toCharArray();
+                
+                for (int x=0;x<aCaracteres.length;x++)
+                    System.out.println("[" + x + "] " + aCaracteres[x]);
+
             
             }
             // Cerramos el archivo
