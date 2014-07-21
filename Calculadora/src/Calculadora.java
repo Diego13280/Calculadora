@@ -33,6 +33,7 @@ public class Calculadora {
             while ((strLinea = buffer.readLine()) != null)   {
                 // Imprimimos la línea por pantalla
                 System.out.println (strLinea);
+                
                 char[] aCaracteres = strLinea.toCharArray();
                 
                 for (int x=0;x<aCaracteres.length;x++)
