@@ -40,7 +40,6 @@ public class Calculadora {
             for(int i=0; i<strLinea.length() ;i++){
                 if(aCaracteres[i] != ' '){
                     char a=aCaracteres[i];
-                    nuevo.push(a);
                     z++;
                 }
 
